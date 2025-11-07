@@ -50,9 +50,11 @@ function FullNameDisplay() {
         </div>
 
       </form>
-      { fullName && <p> Full Name : { fullName } </p> }
+      /* { fullName && <p> Full Name : { fullName } </p> } */
+      {fullName && <p>Full Name: {fullName}</p>}
     </div>
   );
 }
 
 export default FullNameDisplay;
+
