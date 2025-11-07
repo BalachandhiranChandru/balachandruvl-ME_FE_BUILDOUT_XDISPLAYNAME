@@ -9,8 +9,10 @@ function FullNameDisplay() {
 
   const handleSubmit = (e) => {
     e.preventDefault(); 
-    const full = `${firstName} ${lastName}`;
-    setFullName(full);
+
+    const fullname = `${firstName} ${lastName}`;
+    setFullName(fullname);
+    // console.log(fullname);
   };
 
 
@@ -20,29 +22,35 @@ function FullNameDisplay() {
       <h1>Full Name Display</h1>
 
       <form onSubmit={handleSubmit}>
+        
         <div>
-          <label>First Name:</label>
+          <label>First Name :</label>
           <input
             type="text"
             value={firstName}
             onChange={(e)=>setFirstName(e.target.value)}
             required
           />
+
         </div>
+
         <div>
-          <label>Last Name:</label>
+          <label>Last Name :</label>
           <input
             type="text"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             required
           />
+          
         </div>
+
         <div>
           <button type="submit">Submit</button>
         </div>
+
       </form>
-      {fullName && <p>Full Name: {fullName}</p>}
+      { fullName && <p> Full Name : { fullName } </p> }
     </div>
   );
 }
